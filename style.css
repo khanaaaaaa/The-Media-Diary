@@ -1,109 +1,136 @@
-import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Reenie+Beanie&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   display: flex;
   font-family: 'Caveat', cursive;
-  background: #f5f5f0;
-  color: #222;
+  background: #f2ede4;
+  color: #2c2c2c;
+  min-height: 100vh;
 }
 
 #sidebar {
   position: sticky;
   top: 0;
   height: 100vh;
-  width: 220px;
-  min-width: 220px;
-  padding: 2.5rem 1.5rem;
-  background: #1a1a1a;
-  border-right: 1px solid #333;
+  width: 210px;
+  min-width: 210px;
+  padding: 2.5rem 1.2rem;
+  background: #ede5d8;
+  border-right: 3px solid #c9b99a;
+  z-index: 1;
 }
 
 #sidebar h2 {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #666;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 1.2rem;
+  color: #8a7560;
   margin-bottom: 1.5rem;
 }
 
 #sidebar ul { list-style: none; }
 
-#sidebar ul li { margin-bottom: 0.4rem; }
+#sidebar ul li { 
+  margin-bottom: 0.5rem; 
+}
 
 .nav-link {
   text-decoration: none;
-  color: #aaa;
-  font-size: 0.95rem;
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   display: block;
   transition: all 0.2s;
+  font-weight: 600;
 }
 
-.nav-link:hover {
-  background: #2a2a2a;
-  color: #fff;
-}
+.nav-link[href="#anime"] { color: #c0392b; background: #fdecea; }
+.nav-link[href="#manga"] { color: #7d3c98; background: #f5eef8; }
+.nav-link[href="#kdramas"] { color: #1a6b8a; background: #e8f6f9; }
+.nav-link[href="#books"] { color: #1e8449; background: #eafaf1; }
+
+.nav-link[href="#anime"]:hover { background: #f5b7b1; }
+.nav-link[href="#manga"]:hover { background: #d7bde2; }
+.nav-link[href="#kdramas"]:hover { background: #a9cce3; }
+.nav-link[href="#books"]:hover { background: #a9dfbf; }
+
 
 #content {
   flex: 1;
   padding: 4rem 5rem;
-  max-width: 900px;
+  max-width: 860px;
+  position: relative;
+
+  background:fixedlinear-gradient(90deg, transparent 59px, #e8a09a 61px, transparent 61px),
+  repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    #c9b99a66 31px,
+    #c9b99a66 32px
+  );
+  background-color: #faf6ef;
 }
 
 #content h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-  letter-spacing: -0.02em;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+  padding-left: 1.5rem;
 }
 
 #content > p {
-  color: #888;
-  margin-bottom: 3.5rem;
-  font-size: 0.95rem;
+  color: #8a7560;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  padding-left: 1.5rem;
 }
 
 section {
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
+  padding-left: 1.5rem;
 }
 
+section#anime h2 { color: #c0392b; border-bottom-color: #f5b7b1; }
+section#mangas h2 { color: #7d3c98; border-bottom-color: #d7bde2; }
+section#kdramas h2 { color: #1a6b8a; border-bottom-color: #a9cce3; }
+section#books h2 { color: #1e8449; border-bottom-color: #a9dfbf; }
+
 section h2 {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #999;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  border-bottom: 25px dashed;
+  padding-bottom: 0.3rem;
 }
 
 .media-list { list-style: none; }
 
 .media-list li {
-  padding: 0.75rem 1rem;
+  padding: 0.45rem 0.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 4px;
   transition: background 0.15s;
 }
 
-.media-list li:hover { background: #efefeb; }
+.media-list li:hover { 
+  background: rgba(0,0,0,0.04);
+}
 
-.media-list li span.title {
-  font-size: 1rem;
-  font-weight: 500;
+.title {
+  font-size: 1.2rem;
 }
 
 .status {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.7rem;
+  font-family: 'Reanie Beanie', cursive;
+  font-size: 1rem;
+  padding: 0.1rem 0.7rem;
   border-radius: 20px;
-  font-weight: 500;
-  text-transform: capitalize;
 }
 
 .status.completed { background: #d4edda; color: #2d6a4f; }
