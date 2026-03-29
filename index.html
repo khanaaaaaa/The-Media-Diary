@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My Media List</title>
-    </head>
-    <body>
-        <nav id="sidebar">
-            <h2>Categories</h2>
-            <ul>
-                <li><a href="#anime" class="nav-link">Anime</a></li>
-                <li><a href="#manga" class="nav-link">Manga/hwa/hua</a></li>
-                <li><a href="#kdramas" class="nav-link">Kdramas</a></li>
-                <li><a href="#books" class="nav-link">Book</a></li>
-            </ul>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Media Diary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-        <nav id="content">
-            <h1>My Media List</h1>
+  <nav id="sidebar">
+    <h2>Categories</h2>
+    <ul>
+      <li><a href="#anime" class="nav-link">Anime</a></li>
+      <li><a href="#manga" class="nav-link">Manga/hwa/hua</a></li>
+      <li><a href="#kdramas" class="nav-link">Kdramas</a></li>
+      <li><a href="#books" class="nav-link">Books</a></li>
+    </ul>
+  </nav>
 
-            <section id="anime">
-                <h2>Anime</h2>
-                <ul class="media-list" id="anime-list"></ul>
-            </section>
+  <main id="content">
+    <h1>My Media Diary</h1>
+    <p>Everything I've watched, read, and consumed.</p>
 
-            <section id="manga">
-                <h2>Manga/hua/hwa</h2>
-                <ul class="media-list" id="manga-list"></ul>
-            </section>
+    <section id="anime">
+      <h2>Anime</h2>
+      <ul class="media-list" id="anime-list"></ul>
+    </section>
 
-            <section id="books">
-                <h2>Books</h2>
-                <ul class="media-list" id="books-list"></ul>
-            </section>
+    <section id="manga">
+      <h2>Manga/hua/hwa</h2>
+      <ul class="media-list" id="manga-list"></ul>
+    </section>
 
-            <section id="kdramas">
-                <h2>Kdramas</h2>
-                <ul class="media-list" id="kdramas-list"></ul>
-            </section>
-        </main>
+    <section id="kdramas">
+      <h2>Kdramas</h2>
+      <ul class="media-list" id="kdramas-list"></ul>
+    </section>
 
-        <script src="data.js"></script>
-        <script src="app.js"></script>
+    <section id="books">
+      <h2>Books</h2>
+      <ul class="media-list" id="books-list"></ul>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
