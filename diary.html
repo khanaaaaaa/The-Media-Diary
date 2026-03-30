@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Media Diary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="sidebar">
+    <h2>Pages</h2>
+    <ul>
+      <li><a href="index.html" class="nav-link">About</a></li>
+      <li><a href="diary.html" class="nav-link active">Media Diary</a></li>
+    </ul>
+    <hr class="sidebar-divider" />
+    <h2>Categories</h2>
+    <ul>
+      <li><a href="#anime"    class="nav-link cat">Anime</a></li>
+      <li><a href="#movies"   class="nav-link cat">Anime Movies</a></li>
+      <li><a href="#kdramas"  class="nav-link cat">Dramas</a></li>
+      <li><a href="#cdmovies" class="nav-link cat">Drama Movies</a></li>
+      <li><a href="#manga"    class="nav-link cat">Manga</a></li>
+      <li><a href="#books"    class="nav-link cat">Books</a></li>
+    </ul>
+  </nav>
+
+  <main id="content">
+    <h1>Media Diary</h1>
+    <p class="subtitle">Everything I've consumed!</p>
+
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-target="anime">Anime</button>
+      <button class="tab-btn" data-target="movies">Anime Movies</button>
+      <button class="tab-btn" data-target="kdramas">Dramas</button>
+      <button class="tab-btn" data-target="cdmovies">Drama Movies</button>
+      <button class="tab-btn" data-target="manga">Manga</button>
+      <button class="tab-btn" data-target="books">Books</button>
+    </div>
+
+    <section id="anime" class="tab-section active">
+      <h2>Anime</h2>
+      <ul class="media-list" id="anime-list"></ul>
+    </section>
+
+    <section id="movies" class="tab-section">
+      <h2>Anime Movies</h2>
+      <ul class="media-list" id="movies-list"></ul>
+    </section>
+
+    <section id="kdramas" class="tab-section">
+      <h2>Dramas</h2>
+      <ul class="media-list" id="kdramas-list"></ul>
+    </section>
+
+    <section id="cdmovies" class="tab-section">
+      <h2>Drama Movies</h2>
+      <ul class="media-list" id="cdmovies-list"></ul>
+    </section>
+
+    <section id="manga" class="tab-section">
+      <h2>Manga/hua/hwa</h2>
+      <ul class="media-list" id="manga-list"></ul>
+    </section>
+
+    <section id="books" class="tab-section">
+      <h2>Books</h2>
+      <ul class="media-list" id="books-list"></ul>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
