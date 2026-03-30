@@ -275,3 +275,9 @@ section#books    h2 { color: #1e8449; border-bottom-color: #a9dfbf; }
 .status.watching  { background: #fff3cd; color: #856404; }
 .status.dropped   { background: #f8d7da; color: #842029; }
 .status.planned   { background: #e2e3e5; color: #383d41; }
+
+/* main page scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #e8e0d0; }
+::-webkit-scrollbar-thumb { background: #c9b99a; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #a89070; }
