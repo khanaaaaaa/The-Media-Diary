@@ -51,3 +51,9 @@ const mediaData = {
     { title: "It Ends With Us", status: "completed", score: 0 },
   ],
 };
+
+const currentlyWatching = {
+    title: "Kaichou wa Maid-sama!",
+    episode: 19,
+    category: "anime",
+};
